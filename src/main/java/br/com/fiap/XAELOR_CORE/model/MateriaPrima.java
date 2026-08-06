@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "TB_MATERIAPRIMA")
-public class MateriasPrimas {
+public class MateriaPrima {
 
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
@@ -20,9 +20,6 @@ public class MateriasPrimas {
 
     @Column(nullable=false, name = "MATPRIMA_NOME")
     private String nome;
-
-    @Column(nullable = false, name = "MATPRIMA_VALORUNIDADE")
-    private Double valorPorUnidade;
 
     @Column(name = "MATPRIMA_TIPOUNIDADE")
     @Enumerated(EnumType.STRING)

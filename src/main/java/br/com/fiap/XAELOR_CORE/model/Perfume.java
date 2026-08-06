@@ -12,7 +12,7 @@ public class Perfume {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name = "PERFUME_ID")
-    private Long ID;
+    private Long id;
 
     @Column (nullable = false, name = "PERFUME_NOME")
     private String nomePerfume;
