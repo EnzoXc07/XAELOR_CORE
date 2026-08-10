@@ -23,7 +23,7 @@ public class MateriaPrima {
 
     @Column(name = "MATPRIMA_TIPOUNIDADE")
     @Enumerated(EnumType.STRING)
-    private TipoUnidade unidade;
+    private TipoUnidade tipoUnidade;
 
     @Column(name = "MATPRIMA_DESCRICAO")
     private String descricao;

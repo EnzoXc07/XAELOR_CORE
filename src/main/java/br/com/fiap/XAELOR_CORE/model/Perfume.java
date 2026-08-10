@@ -23,6 +23,9 @@ public class Perfume {
     @Column (nullable = false, name = "PERFUME_VALORCUSTO")
     private Double valorCustoPerfume;
 
+    @Column (nullable = false, name = "PERFUME_GENERO")
+    private String generoPerfume;
+
     @Column (name = "PERFUME_DESCRICAO")
     private String descricaoPerfume;
 }
