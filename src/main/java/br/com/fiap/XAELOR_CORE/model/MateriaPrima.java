@@ -21,7 +21,7 @@ public class MateriaPrima {
     @Column(nullable=false, name = "MATPRIMA_NOME")
     private String nome;
 
-    @Column(name = "MATPRIMA_TIPOUNIDADE")
+    @Column(nullable = false, name = "MATPRIMA_TIPOUNIDADE")
     @Enumerated(EnumType.STRING)
     private TipoUnidade tipoUnidade;
 

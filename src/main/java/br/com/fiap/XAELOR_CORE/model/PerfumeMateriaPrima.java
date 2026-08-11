@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -40,4 +42,13 @@ public class PerfumeMateriaPrima {
     @Column(nullable = false, name = "PERMAT_TIPOUNIDADE")
     @Enumerated(EnumType.STRING)
     private TipoUnidade tipoUnidade;
+
+    @Column(nullable = false, name = "PERMAT_CUSTOTOTAL")
+    private Double custoTotal;
+
+    @Column(nullable = false, name = "PERMAT_MARGEMLUCRO")
+    private BigDecimal margemLucro;
+
+    @Column(nullable = false, name = "PERMAT_VALORFINAL")
+    private Double valorFinal;
 }
