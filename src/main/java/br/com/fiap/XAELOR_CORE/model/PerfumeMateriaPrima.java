@@ -2,6 +2,7 @@ package br.com.fiap.XAELOR_CORE.model;
 
 import br.com.fiap.XAELOR_CORE.enums.TipoUnidade;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,6 +36,7 @@ public class PerfumeMateriaPrima {
     @JoinColumn (name = "MATPRIMA_NOME")
     private MateriaPrima nome_materiaPrima;
 
+    @Positive
     @Column(nullable = false, name = "PERMAT_VALORUNIDADE")
     private Double valorPorUnidade;
 
@@ -43,12 +45,15 @@ public class PerfumeMateriaPrima {
     @Enumerated(EnumType.STRING)
     private TipoUnidade tipoUnidade;
 
+    @Positive
     @Column(nullable = false, name = "PERMAT_CUSTOTOTAL")
     private Double custoTotal;
 
+    @Positive
     @Column(nullable = false, name = "PERMAT_MARGEMLUCRO")
     private BigDecimal margemLucro;
 
+    @Positive
     @Column(nullable = false, name = "PERMAT_VALORFINAL")
     private Double valorFinal;
 }

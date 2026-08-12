@@ -12,6 +12,5 @@ public class PerfumeController {
     @PersistenceContext
     private EntityManager em;
 
-    Connection conn =
 
 }
