@@ -16,23 +16,24 @@ import java.math.BigDecimal;
 @Table (name = "TB_PERFUME_MATERIA_PRIMA")
 public class PerfumeMateriaPrima {
 
+    @Id
     @Column (name = "PERMAT_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn (name = "PERFUME_ID")
     private Perfume id_perfume;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn (name = "PERFUME_NOME")
     private Perfume nome_perfume;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn (name = "MATPRIMA_ID")
     private MateriaPrima id_materiaPrima;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn (name = "MATPRIMA_NOME")
     private MateriaPrima nome_materiaPrima;
 
@@ -40,7 +41,7 @@ public class PerfumeMateriaPrima {
     @Column(nullable = false, name = "PERMAT_VALORUNIDADE")
     private Double valorPorUnidade;
 
-    @OneToMany
+
     @Column(nullable = false, name = "PERMAT_TIPOUNIDADE")
     @Enumerated(EnumType.STRING)
     private TipoUnidade tipoUnidade;

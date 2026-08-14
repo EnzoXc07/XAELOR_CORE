@@ -2,13 +2,20 @@ package br.com.fiap.XAELOR_CORE.Service;
 
 import br.com.fiap.XAELOR_CORE.Repository.PerfumeRepository;
 import br.com.fiap.XAELOR_CORE.model.Perfume;
+import org.springframework.stereotype.Service;
+import java.util.List;
 
+@Service
 public class PerfumeService {
 
     private final PerfumeRepository perfumeRepository;
 
     public PerfumeService(PerfumeRepository perfumeRepository) {
         this.perfumeRepository = perfumeRepository;
+    }
+
+    public List<Perfume> Listar() {
+        return perfumeRepository.findAll();
     }
 
     public Perfume cadastrar(Perfume perfume){
